@@ -1,0 +1,100 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  position: relative;
+}
+
+.solar-system {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  animation: rotate 60s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sun {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+}
+
+.orbit {
+  position: absolute;
+  border: 1px dashed #fff;
+  border-radius: 50%;
+  animation: orbit 10s linear infinite;
+}
+
+.orbit-1 { width: 150px; height: 150px; animation-duration: 12s; }
+.orbit-2 { width: 200px; height: 200px; animation-duration: 18s; }
+.orbit-3 { width: 250px; height: 250px; animation-duration: 24s; }
+.orbit-4 { width: 300px; height: 300px; animation-duration: 30s; }
+.orbit-5 { width: 350px; height: 350px; animation-duration: 36s; }
+.orbit-6 { width: 400px; height: 400px; animation-duration: 42s; }
+.orbit-7 { width: 450px; height: 450px; animation-duration: 48s; }
+.orbit-8 { width: 500px; height: 500px; animation-duration: 54s; }
+
+.planet {
+  width: 20px;
+  height: 20px;
+  background-color: #0d47a1;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.planet-1 { background-color: #ff5722; width: 20px; height: 20px; }
+.planet-2 { background-color: #3f51b5; width: 25px; height: 25px; }
+.planet-3 { background-color: #4caf50; width: 30px; height: 30px; }
+.planet-4 { background-color: #ffeb3b; width: 35px; height: 35px; }
+.planet-5 { background-color: #9c27b0; width: 40px; height: 40px; }
+.planet-6 { background-color: #00bcd4; width: 45px; height: 45px; }
+.planet-7 { background-color: #e91e63; width: 50px; height: 50px; }
+.planet-8 { background-color: #8bc34a; width: 55px; height: 55px; }
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  animation: twinkle 3s infinite alternate;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
