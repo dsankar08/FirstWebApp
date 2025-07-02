@@ -4,3 +4,4 @@ This is a Solar system app. This app was built using AI. source code is inside t
 
 I have to implement the deployment process using Devops tools.
 
+![image](https://github.com/user-attachments/assets/d728d237-d965-431b-b361-04849eeae285)
