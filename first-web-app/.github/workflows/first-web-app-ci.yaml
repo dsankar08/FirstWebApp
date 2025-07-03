@@ -3,8 +3,10 @@ name : Continous implementation of First Web App
 # This is CI just has Docker Login, Building and Pushing the image only 
 
 on: 
-    push:
-    workflow_dispatch:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
     
 jobs:
     docker_build_push:
