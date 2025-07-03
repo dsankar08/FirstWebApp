@@ -33,4 +33,4 @@ jobs:
               run: |
                 docker images
                 docker run -p 3000:3000 ${{ vars.DOCKERHUB_USERNAME }}/firstapp:${{ github.sha }} 
-                curl https://localhost:3000
+                curl http://172.17.0.2:3000
