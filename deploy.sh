@@ -5,7 +5,7 @@ git clone https://github.com/dsankar08/FirstWebApp.git
 
 sleep 10
 
-cd FirstWebApp/first-web-app
+cd FirstWebApp
 
 cd K8s
 

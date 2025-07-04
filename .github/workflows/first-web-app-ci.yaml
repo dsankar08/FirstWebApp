@@ -6,6 +6,7 @@ on:
   push:
     branches:
       - main
+      - 'feature/*'
   workflow_dispatch:
     
 jobs:
@@ -22,7 +23,7 @@ jobs:
                 username: ${{ vars.DOCKERHUB_USERNAME }}
                 password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-            - name: Build and push
+            - name: Build image
               uses: docker/build-push-action@v6
               with:
                 push: false
@@ -33,4 +34,9 @@ jobs:
               run: |
                 docker images
                 docker run -p 3000:3000 ${{ vars.DOCKERHUB_USERNAME }}/firstapp:${{ github.sha }} 
-                curl http://172.17.0.2:3000
+                
+            - name: Pushing image to Docker Hub
+              uses: docker/build-push-action@v6    
+              with:
+                push: true
+                tags: ${{ vars.DOCKERHUB_USERNAME }}/firstapp:${{ github.sha }} 
