@@ -4,6 +4,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+     <div style={{ textAlign: 'center', marginTop: '100px' }}>
+      <h1 style={{ color: 'lightblue' }}>Solar System</h1>
+    </div>
       <div className="solar-system">
         <div className="sun"></div>
         <div className="orbit orbit-1">
