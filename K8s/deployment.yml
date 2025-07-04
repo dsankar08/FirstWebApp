@@ -18,7 +18,7 @@ spec:
         app: firstapp
     spec:
       containers:
-      - image: sankar08d/firstapp:2.0
+      - image: sankar08d/firstapp:9f0d168ec407bfa3874824cb7c9340e603c7b8c0
         name: firstapp
         resources: {}
 status: {}
